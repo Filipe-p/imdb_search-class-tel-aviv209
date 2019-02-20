@@ -1,0 +1,13 @@
+
+
+<% @results.each do |result| %>
+  <% if result.searchable_type == 'Movie'  %>
+      <% movie = result.searchable %>
+      <h2> <%= movie.title %> </h2>
+      <p> <%= movie.director %> </p>
+  <% else %>
+       <% serie = result.searchable %>
+      <h2> <%= serie.title %> </h2>
+      <p> <%= serie.year %> </p>
+  <% end %>
+<% end %>
